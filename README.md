@@ -36,7 +36,7 @@ int main()
 //devolver o endereço dessa variavel alocada
 int* somaIntervalo(int A, int B){
     
-    int* sum = malloc(sizeof(int));
+    int* sum = (int*) malloc(sizeof(int));
     *sum = 0;
     for(int i = A;i <= B; i++){
         *sum += i;

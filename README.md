@@ -38,22 +38,20 @@ int* somaIntervalo(int A, int B){
     
     int* sum = malloc(sizeof(int));
     *sum = 0;
-    int i;
-    for(i = 0;i < B; i++){
-        *sum += A;
+    for(int i = A;i <= B; i++){
+        *sum += i;
     }
     return sum;
 }
 
 int main()
 {
-    int a = 10,b = 20;
-    int* end;
-    *end = 0;
+    int a = 1,b = 10;
+    
 
-    end = somaIntervalo(a,b);
+    int* end = somaIntervalo(a,b);
 
-    printf("%p\n", &end);
+    printf("%d\n", *end);
     
     return 0;
 }

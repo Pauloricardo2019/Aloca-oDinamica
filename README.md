@@ -26,3 +26,34 @@ int main()
     
     return 0;
 }
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//Somar o intervalo entre A e B 
+//e guardar em uma variavel alocada dinamicamente dentro da funcao
+//devolver o endereço dessa variavel alocada
+int* somaIntervalo(int A, int B){
+    
+    int* sum = malloc(sizeof(int));
+    *sum = 0;
+    int i;
+    for(i = 0;i < B; i++){
+        *sum += A;
+    }
+    return sum;
+}
+
+int main()
+{
+    int a = 10,b = 20;
+    int* end;
+    *end = 0;
+
+    end = somaIntervalo(a,b);
+
+    printf("%p\n", &end);
+    
+    return 0;
+}
